@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_alarm"
+        android:icon="@drawable/ic_alarm"
+        android:title="Alarme"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_timer"
+        android:icon="@drawable/ic_timer"
+        android:title="Timer"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/action_cronom"
+        android:icon="@drawable/ic_clocking"
+        android:title="Cronômetro"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_ajustes"
+        android:icon="@drawable/ic_settings"
+        android:title="Ajustes"
+        app:showAsAction="ifRoom"/>
+</menu>

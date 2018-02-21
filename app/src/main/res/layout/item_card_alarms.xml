@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="10dp"
+    app:cardBackgroundColor="#FBF9FD"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="false">
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="6dp">
+
+        <TextView
+            android:id="@+id/txt_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="07:00"
+            android:textColor="#672FB4"
+            android:textSize="50sp" />
+
+        <ImageView
+            android:id="@+id/img_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_clock"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_clocking" />
+
+        <TextView
+            android:id="@+id/txt_dias_semana"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_below="@+id/txt_clock"
+            android:layout_toEndOf="@+id/img_timer"
+            android:gravity="center"
+            android:text="DIAS DAS SEMANA"
+            android:textColor="#47525E"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/img_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_timer"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_calendar" />
+
+        <TextView
+            android:id="@+id/txt_temp_rest"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_below="@+id/txt_dias_semana"
+            android:layout_toEndOf="@+id/img_calendar"
+            android:gravity="center"
+            android:text="TEMPO RESTANTE:"
+            android:textColor="#47525E"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_below="@+id/txt_dias_semana"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/txt_temp_rest"
+            android:gravity="center"
+            android:text="19 horas e 18 minutos"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10sp" />
+
+        <RadioGroup
+            android:checkedButton="@+id/offer"
+            android:id="@+id/toggle"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/out_line_roxo"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="1dp"
+                android:id="@+id/search"
+                android:background="@drawable/toggle_widget_background"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Off"
+                android:textColor="#7e7d7d" />
+
+            <RadioButton
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/offer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_widget_background"
+                android:button="@null"
+                android:gravity="center"
+                android:text="On"
+                android:textColor="#fff" />
+        </RadioGroup>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
