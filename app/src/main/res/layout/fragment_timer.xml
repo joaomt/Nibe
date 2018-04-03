@@ -1,16 +1,197 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.joao.nibe.fragments.Fragment_timer"
-    android:background="@color/trasparent">
+    android:background="#fff"
+    android:paddingTop="20dp"
+    tools:context="com.joao.nibe.fragments.Fragment_timer">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/rl_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="fragment Timer"
-        android:gravity="center"
-        android:textSize="25sp"/>
+        android:layout_height="250dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:background="@drawable/shape_radius_login"
+        android:backgroundTint="#121111"
+        android:paddingTop="10dp">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/txt_defina_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="Defina o Timer"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22sp" />
+
+        <View
+            android:id="@+id/linha_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/txt_defina_timer"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimary" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/linha_1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/ll_np_hour"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@+id/ll_np_minute"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_up" />
+
+                <NumberPicker
+                    android:id="@+id/np_hour"
+                    android:layout_width="60dp"
+                    android:layout_height="150dp"
+                    android:descendantFocusability="blocksDescendants"
+                    android:theme="@style/NumberPickerText" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_up"
+                    android:rotation="180" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_np_minute"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_up" />
+
+                <NumberPicker
+                    android:id="@+id/nb_minute"
+                    android:layout_width="60dp"
+                    android:layout_height="150dp"
+                    android:descendantFocusability="blocksDescendants"
+                    android:theme="@style/NumberPickerText">
+
+                </NumberPicker>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_up"
+                    android:rotation="180" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_np_secods"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/ll_np_minute"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_up" />
+
+                <NumberPicker
+                    android:id="@+id/nb_seconds"
+                    android:layout_width="60dp"
+                    android:layout_height="150dp"
+                    android:descendantFocusability="blocksDescendants"
+                    android:theme="@style/NumberPickerText">
+
+                </NumberPicker>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_up"
+                    android:rotation="180" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_iniciar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rl_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_radius_login"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Iniciar"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="26sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_circle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shape_circle"
+            android:elevation="10dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_timer" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/txt_tt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="16dp"
+                android:text="Crie timers diferentes definindo seu tempo em horas, minutos ou segundos."
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

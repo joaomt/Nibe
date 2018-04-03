@@ -16,6 +16,7 @@ import com.joao.nibe.fragments.Fragment_cronometro;
 import com.joao.nibe.fragments.Fragment_timer;
 
 public class Activity_home extends AppCompatActivity {
+    private BottomNavigationView bottom_navigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,8 @@ public class Activity_home extends AppCompatActivity {
         final Fragment_alarm frag_alarm = new Fragment_alarm();
         getSupportFragmentManager().beginTransaction().add(R.id.content,frag_alarm).commit();
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        bottom_navigation = findViewById(R.id.bottom_navigation);
+        bottom_navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId())

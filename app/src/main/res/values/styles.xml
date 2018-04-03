@@ -16,12 +16,17 @@
     </style>
 
     <style name="AppTheme.HomeBottomNavigation" parent="AppTheme.Abertura">
-        <item name="colorPrimary">#5d007c</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    bottomNavigation
+    <style name="NumberPickerText" parent="AppTheme">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAlignment">center</item>
+
+    </style>
+
 
 </resources>
